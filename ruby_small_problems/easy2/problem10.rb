@@ -1,9 +1,5 @@
 def negative(number)
-  if number > 0
-    number * (-1)
-  else
-    number
-  end
+  number > 0 ? -number : number
 end
 
 puts negative(5) == -5
