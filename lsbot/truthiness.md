@@ -1,7 +1,7 @@
-Q1.   What is truthiness in Ruby, and how does it differ from the boolean values `true` and `false`? Provide examples of values that are considered truthy and falsy in Ruby.
+# Q1.   What is truthiness in Ruby, and how does it differ from the boolean values `true` and `false`? Provide examples of values that are considered truthy and falsy in Ruby.
 
-Truthiness in Ruby referes to an object's property that determines whether it considered true or false in a conditional context while boolean values are specific data types that can only be `true` or `false`.
-For example, all objects in Ruby are truthy except for `nil` and `false`.The code below demonstrate this property(truthiness) of an object with conditional statement:
+Truthiness in Ruby referes to an object's property that determines whether it considered true or false in a conditional context while boolean values are specific data types that can only be `true` or `false` and are the only instances of TrueClas and FalseClass respectively.
+All objects in Ruby are truthy except for `nil` and `false`. This meand that in conditional statements, any value other than `nil` or `false` will be treated as true. Here is a demonstration of the concept:
 
 ```ruby
 if "Hello"
