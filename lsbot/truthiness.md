@@ -42,4 +42,4 @@ Here is the output for each method call:
 `check_value(false)`outputs "The value is falsy"(false is falsy)
 `check_value("false")`outputs "The value is truthy"(the string "false" is truthy)
 
-the method works by using the truthiness of the `value` parameter in the `if` condition. if `value` is truthy, it prints that it's truthy; otherwise, it prints that it's falsy.
+- the method works by using the truthiness of the `value` parameter in the `if` condition. if `value` is truthy, it prints that it's truthy; otherwise, it prints that it's falsy.
