@@ -20,6 +20,7 @@ def time_of_day(minutes)
   hours, minutes = minutes_of_day.divmod(MINUTES_IN_HOUR)
   # binding.pry
   formatted_time = format("%02d:%02d", hours, minutes)
+  formatted_time
 end
 
 normalize_minutes_to_0_through_1439(-3)
