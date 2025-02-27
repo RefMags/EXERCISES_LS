@@ -1,26 +1,23 @@
-require 'pry'
 def combining_arg(arr1, arr2)
   new_arr = []
   counter1 = 0
   counter2 = 0
 
   loop do
-    if test
-
+    if counter1 < arr1.size && counter2 < arr2.size
+      new_arr << arr1[counter1]
+      new_arr << arr2[counter2]
+      counter1 += 1
+      counter2 += 1
+    elsif counter1 < arr1.size
+      new_arr << arr1[counter1]
+      counter1 += 1
+    elsif counter2 < arr2.size
+      new_arr << arr2[counter2]
+      counter2 += 1
     else
-
+      break
     end
-    new_arr << arr1[counter1]
-    new_arr << arr2[counter2]
-    counter1 += 1
-    counter2 += 1
-  # binding.pry
-    break if counter1 >= arr1.size && counter2 >= arr2.size
-  end
-  if arr1.size > arr2.size
-    new_arr << arr1[counter1..-1]
-  elsif arr1.size < arr2.size
-    new_arr << arr2[counter2..-1]
   end
   p new_arr
 end
