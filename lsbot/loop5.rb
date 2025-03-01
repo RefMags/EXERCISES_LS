@@ -1,13 +1,12 @@
 def pairing_target_sums(arr, target_sum)
   result = []
 
-  arr.each do |num|
-    (1..arr.size).each do |index|
-      if (num + arr[index] == target_sum)
-        p [num, arr[index]]
-      end
+  arr.each_with_index do |num, idx1|
+    (idx1 + 1...arr.size).each do |idx2|
+      result << [num,arr[idx2]] if (num + arr[idx2]) == target_sum
     end
   end
+  p result
 end
 
 
