@@ -1,4 +1,4 @@
-def student_grade(arr)
+def replace_student_grade(arr)
   students_score_hash = arr.to_h
   class_score_sum = students_score_hash.values.sum
   average_score = class_score_sum / students_score_hash.values.size
@@ -14,4 +14,4 @@ def student_grade(arr)
   end
 end
 
-student_grade([["John", 40], ["Sean", 90], ["Brett", 70]])
+replace_student_grade([["John", 40], ["Sean", 90], ["Brett", 70]])
