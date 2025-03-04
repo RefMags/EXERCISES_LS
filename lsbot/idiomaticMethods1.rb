@@ -1,13 +1,5 @@
 def reverse_string(arr)
-  reversed_strings = []
-
-  arr.map do |str|
-    if str.count('aeiou') == 3
-      reversed_strings << str.reverse
-    end
-  end
-
-  reversed_strings
+  arr.select {|str| str.downcase.count('aeiou') == 3}.map(&:reverse)
 end
 
 p reverse_string(["black", "blackout", "cookout"]) == ["tuokcalb"]
