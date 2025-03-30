@@ -1,5 +1,5 @@
 def rotate_array(arr)
-  arr.freeze
+  # arr.freeze
   arr_dup = arr.dup
   first_ele =  arr_dup.shift
   arr_dup << first_ele
