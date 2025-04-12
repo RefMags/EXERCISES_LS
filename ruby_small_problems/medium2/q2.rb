@@ -12,12 +12,14 @@ def block_word?(word)
     end
   end
 
-  up_word.chars.sort == result.chars.sort ? true : false
+  # up_word.chars.sort == result.chars.sort ? true : false
+
+  # up_word.chars.tally == result.chars.tally ? true : false
 
 end
 
 # p block_word?('BATCH') == true
 # p block_word?('BUTCH') == false
 # p block_word?('jest') == true
-block_word?('apples') #== false
+p block_word?('apples') #== false
 # p block_word?('Baby') == false
