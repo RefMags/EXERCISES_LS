@@ -1,7 +1,6 @@
 def closest_numbers(digits)
  pairs = []
 
-
  digits.each_with_index do |digit, idx|
    (idx + 1..digits.size - 1).each do |idx2|
      pairs << [digit, digits[idx2]]
