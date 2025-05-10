@@ -36,3 +36,15 @@ p high('what time are we climbing up the volcano') == 'volcano'
 p high('take me to semynak') == 'semynak'
 
 high('aaa b') #== 'aaa'
+
+## Efficiency based on code readability
+
+def high(str)
+  alphabet_hash = ('a'..'z').each_with_object({}).with_index(1) do |(letter, hash), index|
+    hash[letter] = index
+  end
+
+  str.split.max_by do |word|
+    word.chars.sum { |char| alphabet_hash[char] || 0 }
+  end
+end
