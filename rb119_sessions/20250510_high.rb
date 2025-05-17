@@ -21,9 +21,7 @@ def high(str)
 
   # maximum = words_score.values.max
   # words_score.find {|k, v| v == maximum }[0]
-
   words_score.max_by {|_ , score| score }[0]
-
 end
 
 # alphabets = ("a".."z")
