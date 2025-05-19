@@ -1,20 +1,26 @@
-def reverse_segments(arr, int)
+def reverse_segments(arr, length)
   substring = []
   substrings = []
 
-  (0..arr.length - 1).step(int).each do |start|
-    end_idx= [start + int - 1, arr.length - 1].min
+  # Iterate to create substring
+  arr.each_with_index do |num, index|
+    substring << num
 
-    p end_idx
+    if substring.size == length || index == arr.length - 1
+      substrings << substring.dup
+      substring.clear
+    end
   end
+
+  substrings.map { |sub| sub.reverse }.flatten
 end
 
 
 
-reverse_segments([1, 2, 3, 4, 5, 6], 3) # [3, 2, 1, 6, 5, 4]
+p reverse_segments([1, 2, 3, 4, 5, 6], 3) # [3, 2, 1, 6, 5, 4]
 
-  # puts reverse_segments([1, 2, 3, 4, 5], 2).inspect # [2, 1, 4, 3, 5]
+  puts reverse_segments([1, 2, 3, 4, 5], 2).inspect # [2, 1, 4, 3, 5]
 
-  # puts reverse_segments([7, 8, 9], 4).inspect # [7, 8, 9]
+  puts reverse_segments([7, 8, 9], 4).inspect # [7, 8, 9]
 
-  # puts reverse_segments([1, 2, 3, 4], 2).inspect # [2, 1, 4, 3]
+  puts reverse_segments([1, 2, 3, 4], 2).inspect # [2, 1, 4, 3]
